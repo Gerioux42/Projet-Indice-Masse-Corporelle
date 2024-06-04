@@ -1,39 +1,39 @@
- import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useNavigation, useRoute } from '@react-navigation/native';
+ importationationationation Réagir de 'réagir';
+importation { Vue, Texte, Feuille de style, ScrollView } de «réagir natif»;
+importation { Ionicônes } de '@ expo / vecteur-icons';
+importation { useNavigation, useRoute } de '@ réact-navigation / natif';
 
 const Page5 = () => {
   const navigation = useNavigation();
-  const route = useRoute();
-  const { bmi } = route.params;
+  const itinéraire = useRoute();
+  const { bmi } = itinéraire.params;
 
   const getSuggestions = (bmi) => {
-    if (bmi < 18.5) {
-      return [
-        'Augmentez votre apport calorique avec des aliments sains.',
-        'Consultez un nutritionniste pour un régime adapté.',
-        'Faites des exercices de musculation pour gagner de la masse.'
+    si (bmi < 18.5) {
+      retour [
+        «Ajmentez votre apport calorique avec des aliments sains.',
+        «Consultez un nutritionniste pour un régime adapté.',
+        «Faites des exercices de musculation pour gagner de la masse.'
       ];
-    } else if (bmi >= 18.5 && bmi < 24.9) {
-      return [
-        'Continuez à maintenir une alimentation équilibrée.',
-        'Faites régulièrement de l’exercice.',
-        'Hydratez-vous bien.'
+    } autre si (bmi> = 18.5 & & bmi < 24.9) {
+      retour [
+        «Continuez à maintenir une alimentation équilibrée.',
+        «Faites régulièrement de l’exercice.',
+        «Hydratez-vous bien.'
       ];
-    } else if (bmi >= 25 && bmi < 29.9) {
-      return [
-        'Réduisez votre apport calorique en évitant les aliments gras et sucrés.',
-        'Augmentez votre activité physique quotidienne.',
-        'Consultez un professionnel de la santé pour des conseils personnalisés.'
+    } autre si (bmi> = 25 & & bmi < 29.9) {
+      retour [
+        «Réduisez votre apport calorique en évitant les aliments gras et sucrés.',
+        «Augmentez votre activité physique quotidienne.',
+        «Consultez un professionnel de la santé pour des conseils personnalisés.'
       ];
-    } else if (bmi >= 30 && bmi < 34.9) {
-      return [
-        'Adoptez un régime alimentaire pauvre en calories.',
-        'Faites de l’exercice régulièrement et consultez un coach sportif.',
-        'Prenez rendez-vous avec un médecin pour un suivi de votre santé.'
+    } autre si (bmi> = 30 & & bmi < 34,9) {
+      retour [
+        «Adoptez un régime alimentaire pauvre en calories.',
+        «Faites de l’exercice régulièrement et consultez un coach sportif.',
+        «Prenez rendez-vous avec un médecin pour un suivi de votre santé.'
       ];
-    } else if (bmi >= 35 && bmi < 39.9) {
+    } autre si (bmi> = 35 & & bmi < 39,9) {
       return [
         'Consultez immédiatement un nutritionniste pour un plan alimentaire.',
         'Intensifiez votre activité physique.',
@@ -49,7 +49,7 @@ const Page5 = () => {
   };
 
   const suggestions = getSuggestions(bmi);
-const [currentPage, setCurrentPage] = React.useState(4); // Page 3 est la page actuelle par défaut
+const [currentPage, setCurrentPage] = React.useState(4); 
   return (
     <View style={styles.container}>
       <Ionicons
@@ -105,14 +105,14 @@ const styles = StyleSheet.create({
   
  pagination: {
   position: 'absolute',
-  bottom: 20, // Positionnement à 0.5 cm du bas
+  bottom: 20, 
   left: 0,
   right: 0,
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 1, // Assurez-vous que la pagination se trouve au-dessus du contenu de la page
-  // marginBottom: -10, // Pour compenser l'espace ajouté par la position absolue
+  zIndex: 1, 
+  // marginBottom: -10, 
 },
   pageIndicator: {
     width: 10,
