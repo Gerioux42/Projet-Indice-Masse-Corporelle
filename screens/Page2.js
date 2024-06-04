@@ -24,7 +24,7 @@ const Page2 = ({ navigation }) => {
      setHeight('');
     navigation.navigate('Page3', { bmi });
   };
-const [currentPage, setCurrentPage] = React.useState(2); // Page 3 est la page actuelle par défaut
+const [currentPage, setCurrentPage] = React.useState(2); 
   return (
     <View style={styles.container}>
       <Image
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    alignItems: 'center', // Center the button horizontally
+    alignItems: 'center', 
     marginTop: 20,
   },
   
@@ -108,14 +108,14 @@ const styles = StyleSheet.create({
 
 pagination: {
   position: 'absolute',
-  bottom: 20, // Positionnement à 0.5 cm du bas
+  bottom: 20, 
   left: 0,
   right: 0,
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 1, // Assurez-vous que la pagination se trouve au-dessus du contenu de la page
-  // marginBottom: -10, // Pour compenser l'espace ajouté par la position absolue
+  zIndex: 1, 
+  // marginBottom: -10, 
 },
 
 
