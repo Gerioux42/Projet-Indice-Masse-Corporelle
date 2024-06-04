@@ -1,39 +1,39 @@
-import React from 'react';
-import { View, Text, StyleSheet, Button , TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+importationationation Réagir de 'réagir';
+importationationation { Vue, Texte, Feuille de style, Bouton , TouchableOpacity } de «réagir natif»;
+importationationation { Ionicônes } de '@ expo / vecteur-icons';
 
-const Page3 = ({ navigation, route }) => {
-  const { bmi } = route.params;
+const Page3 = ({ navigation, itinéraire }) => {
+  const { bmi } = itinéraire.params;
 
   const getDescription = (bmi) => {
-    if (bmi < 18.5) {
-      return 'Insuffisance pondérale (maigreur)';
-    } else if (bmi >= 18.5 && bmi < 24.9) {
-      return 'Corpulence normale';
-    } else if (bmi >= 25 && bmi < 29.9) {
-      return 'Surpoids';
-    } else if (bmi >= 30 && bmi < 34.9) {
-      return 'Obésité modérée';
-    } else if (bmi >= 35 && bmi < 39.9) {
-      return 'Obésité sévère';
-    } else {
-      return 'Obésité morbide ou massive';
+    si (bmi < 18.5) {
+      retour «Insuffisance pangérale (maigreur)»;
+    } autre si (bmi> = 18.5 & & bmi < 24.9) {
+      retour «Corpulence normale»;
+    } autre si (bmi> = 25 & & bmi < 29.9) {
+      retour «Surpoids»;
+    } autre si (bmi> = 30 & & bmi < 34,9) {
+      retour «Obéité modérée»;
+    } autre si (bmi> = 35 & & bmi < 39,9) {
+      retour «Obéité sévère»;
+    } autre {
+      retour «Obésité morbide ou massive»;
     }
   };
 
   const description = getDescription(bmi);
-const [currentPage, setCurrentPage] = React.useState(3); // Page 3 est la page actuelle par défaut
-  return (
-    <View style={styles.container}>
+const [currentPage, setCurrentPage] = Réagir.useState(3); 
+  retour (
+    <View style={styles.récipient}>
       <Ionicons
-        name="arrow-back"
-        size={24}
-        color="#FAFF15"
-        onPress={() => navigation.navigate('Page2')}
-        style={styles.arrow}
+ nom ="flèche-retour"
+ taille ={24}
+ couleur ="# FAFF15"
+ onPress ={() => navigation.naviguer(«Page2»)}
+ style ={styles.flèche}
       />
-      <Text style={styles.title}>Résultats</Text>
-      <Text style={styles.result}>{bmi}</Text>
+      <Text style={styles. .titre}> Résultats </Text>
+      <Text style={styles. .résulter}>{bmi}</Text>
       <Text style={styles.description}>{description}</Text>
          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Page5', { bmi })}>
         <Text style={styles.buttonText}>Conseils</Text>
@@ -86,9 +86,9 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 20,
     borderBottomRightRadius: 20,
     alignItems: 'center',
-    marginTop: 100,  // Adjust this value to move the button down
-    marginRight: 25, // Adjust this value to move the button to the right
-    alignSelf: 'flex-end', // Align the button to the right
+    marginTop: 100,  
+    marginRight: 25, 
+    alignSelf: 'flex-end', 
   },
   buttonText: {
     color: '#005858',
@@ -98,14 +98,14 @@ const styles = StyleSheet.create({
 
   pagination: {
   position: 'absolute',
-  bottom: 20, // Positionnement à 0.5 cm du bas
+  bottom: 20, 
   left: 0,
   right: 0,
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  zIndex: 1, // Assurez-vous que la pagination se trouve au-dessus du contenu de la page
-  // marginBottom: -10, // Pour compenser l'espace ajouté par la position absolue
+  zIndex: 1, 
+  // marginBottom: -10, 
 },
   pageIndicator: {
     width: 10,
